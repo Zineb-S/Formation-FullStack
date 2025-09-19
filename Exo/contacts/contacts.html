@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestionnaire de Contacts</title>
+    <link rel="stylesheet" href="contacts.css">
+</head>
+<body>
+    <h2>Gestionnaire de Contacts</h2>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Nom" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="phone" placeholder="Téléphone">
+        <button type="submit">Ajouter Contact</button>
+    </form>
+
+    <!-- 🔍 Search + Import/Export -->
+    <div class="controls">
+        <input type="text" id="searchBox" placeholder="Rechercher par nom ou email...">
+        <button id="exportBtn">Exporter</button>
+        <label for="importFile" class="import-label">Importer</label>
+        <input type="file" id="importFile" accept=".json" hidden>
+    </div>
+
+    <table id="contactTable">
+        <thead>
+            <tr>
+                <th>Nom</th><th>Email</th><th>Téléphone</th><th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="contacts.js"></script>
+</body>
+</html>

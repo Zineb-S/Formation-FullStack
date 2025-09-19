@@ -1,0 +1,157 @@
+/* Global styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Page title */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+/* Contact form */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 200px;
+  transition: border-color 0.2s;
+}
+
+form input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+form button {
+  background: #3498db;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #2980b9;
+}
+
+/* Controls bar */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+/* Search box */
+#searchBox {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 250px;
+  transition: border-color 0.2s;
+}
+
+#searchBox:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Buttons */
+button, .import-label {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+  color: white;
+}
+
+/* Specific button colors */
+#exportBtn {
+  background: #2ecc71;
+}
+#exportBtn:hover {
+  background: #27ae60;
+}
+
+.import-label {
+  background: #9b59b6;
+}
+.import-label:hover {
+  background: #8e44ad;
+}
+
+.editBtn {
+  background: #f39c12;
+}
+.editBtn:hover {
+  background: #d68910;
+}
+
+.deleteBtn {
+  background: #e74c3c;
+}
+.deleteBtn:hover {
+  background: #c0392b;
+}
+
+/* Contact table */
+#contactTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contactTable thead {
+  background: #3498db;
+  color: #fff;
+}
+
+#contactTable th,
+#contactTable td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+#contactTable tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+#contactTable tbody tr:hover {
+  background: #f1f7fd;
+}
+
+/* Highlight search */
+mark {
+  background: #ffeaa7;
+  padding: 0 2px;
+  border-radius: 3px;
+}

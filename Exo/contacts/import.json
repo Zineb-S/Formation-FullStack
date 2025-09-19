@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1695111111111,
+    "name": "Alice Dupont",
+    "email": "alice.dupont@example.com",
+    "phone": "0601234567"
+  },
+  {
+    "id": 1695222222222,
+    "name": "Karim El Amrani",
+    "email": "karim.amrani@example.com",
+    "phone": "0612345678"
+  },
+  {
+    "id": 1695333333333,
+    "name": "Sophie Martin",
+    "email": "sophie.martin@example.com",
+    "phone": ""
+  }
+]
