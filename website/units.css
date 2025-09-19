@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f7f9fc;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.container {
+  border: 2px dashed #bbb;
+  padding: 20px;
+  background: #fff;
+}
+
+.box {
+  background: #3498db;
+  color: white;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Absolute unit */
+.px { width: 100px; }
+
+/* Relative to parent container */
+.percent { width: 50%; }
+
+/* Relative to parent font size */
+.em { font-size: 2em; width: 10em; }
+
+/* Relative to root font size */
+.rem { font-size: 2rem; width: 10rem; }
+
+/* Relative to viewport width */
+.vw { width: 20vw; }

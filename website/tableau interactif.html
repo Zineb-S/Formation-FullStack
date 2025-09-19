@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau Interactif</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background 0.3s, color 0.3s;
+      background: #ffffff;
+      color: #222;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    /* Dark mode */
+    .dark-mode {
+      background: #1c1c1c;
+      color: #f5f5f5;
+    }
+
+    /* Button styling */
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #3498db;
+      color: white;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tableau Interactif</h1>
+
+  <!-- Buttons -->
+  <button id="btn-bg">Changer la couleur du fond</button>
+  <button id="btn-skill">Ajouter une tache</button>
+  <button id="btn-date">Afficher la date du jour</button>
+  <button id="btn-theme">🌙 Toggle Dark/Light</button>
+
+  <h2>Compétences</h2>
+  <ul id="skills">
+    <li>HTML</li>
+    <li>CSS</li>
+  </ul>
+
+    <form id="contactForm">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" required>
+        <label for="email">Email :</label>
+        <input type="email" id="email" required>
+        <label for="message">Message :</label>
+        <textarea id="message"></textarea>
+        <button type="submit">Envoyer</button>
+</form>
+<footer id="footer">© Mon CV</footer>
+
+<ul id="userList"></ul>
+  
+
+  <script>
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then(res => res.json())
+    .then(users => {
+    const list = document.getElementById("userList");
+    users.forEach(user => {
+    const li = document.createElement("li");
+    li.innerText = `${user.name} "${user.email}" - ${user.company.name} (${user.website}) `;
+    list.appendChild(li);
+    });
+    });
+
+
+
+
+
+
+
+
+ const localName = localStorage.getItem("name");
+    const localEmail = localStorage.getItem("email");
+    if (localName && localEmail){
+      alert("Bienvenue " + localName + ", votre email est " + localEmail);
+    } 
+localStorage.removeItem("username");
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // empêche l9envoi automatique
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+        if (name === "") {
+        alert("Le nom est obligatoire !");
+        return;
+        }
+        if (!email.includes("@")) {
+      alert("Email invalide !");
+      return;
+}
+    // Sauvegarder
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+    // Lire
+   
+    // Supprimer
+    
+
+      alert("Formulaire envoyé avec succès !");});
+    // 1. Changer la couleur du fond
+    document.getElementById("btn-bg").addEventListener("click", () => {
+      document.body.style.backgroundColor = "lightblue";
+    });
+
+    // 2. Ajouter une compétence
+    document.getElementById("btn-skill").addEventListener("click", () => {
+      const li = document.createElement("li");
+      li.textContent = "Nouvelle tache";
+      document.getElementById("skills").appendChild(li);
+    });
+
+    // 3. Afficher la date du jour
+    document.getElementById("btn-date").addEventListener("click", () => {
+      const today = new Date().toLocaleDateString("fr-FR", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+      document.getElementById("footer").textContent = "Date du jour : " + today;
+    });
+
+    // 4. Toggle Dark/Light Mode
+    document.getElementById("btn-theme").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+
+    
+  </script>
+</body>
+</html>

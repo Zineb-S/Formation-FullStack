@@ -1,0 +1,91 @@
+/* === Variables globales === */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --font-family: 'Poppins', sans-serif;
+  --background: #ffffff;
+  --text: #333333;
+}
+
+/* Thème clair */
+.theme-light {
+  --background: #ffffff;
+  --text: #333333;
+}
+
+/* Thème sombre */
+.theme-dark {
+  --background: #1c1c1c;
+  --text: #f0f0f0;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 20px;
+}
+
+/* Bouton thème */
+button {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Grid CV */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+/* Sections */
+.main h1, .skills h1 {
+  font-size: 20px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  margin-top: 25px;
+}
+
+/* Breakpoints */
+@media (max-width: 768px) {
+  .cv-grid {
+    grid-template-columns: 1fr; /* Mobile : 1 colonne */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .cv-grid {
+    grid-template-columns: 1fr 1fr; /* Tablette : 2 colonnes */
+  }
+}
+
+@media (min-width: 1024px) {
+  .cv-grid {
+    grid-template-columns: 1fr 2fr 1fr; /* Desktop : 3 colonnes */
+  }
+}

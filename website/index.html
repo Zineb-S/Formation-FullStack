@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Sofia El Amrani</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button onclick="toggleTheme()">Changer de thème</button>
+
+  <section class="cv-grid">
+
+    <!-- Colonne gauche -->
+    <div class="sidebar">
+      <img class="profile-pic" src="https://i.pravatar.cc/200" alt="Photo">
+      <h2>Sofia El Amrani</h2>
+      <p class="job-title">Développeuse Full-Stack</p>
+      <hr>
+      <h3>Contact</h3>
+      <p>📍 Casablanca, Maroc</p>
+      <p>📧 sofia.elamrani@mail.com</p>
+      <p>📞 +212 6 45 67 89 01</p>
+      <hr>
+      <h3>Langues</h3>
+      <ul>
+        <li>🇲🇦 Arabe — Natif</li>
+        <li>🇫🇷 Français — Courant</li>
+        <li>🇬🇧 Anglais — Avancé</li>
+      </ul>
+    </div>
+
+    <!-- Colonne centrale -->
+    <div class="main">
+      <h1>À propos</h1>
+      <p>
+        Développeuse passionnée avec 4 ans d’expérience dans la création
+        d’applications web modernes. Enthousiaste à l’idée de travailler
+        dans des environnements agiles et d’apporter des solutions innovantes.
+      </p>
+
+      <h1>Expériences</h1>
+      <div class="experience">
+        <h3>Développeuse Web — TechWave</h3>
+        <span>2022 - Aujourd’hui</span>
+        <ul>
+          <li>Création d’un tableau de bord analytique avec React & Node.js</li>
+          <li>Optimisation des performances (+30%) grâce à une refonte API</li>
+        </ul>
+      </div>
+
+      <div class="experience">
+        <h3>Stage Développement — InnoSoft</h3>
+        <span>2021 - 2022</span>
+        <ul>
+          <li>Participation à la migration d’une application vers le cloud</li>
+          <li>Implémentation d’un module de paiement sécurisé (Stripe)</li>
+        </ul>
+      </div>
+
+      <h1>Formation</h1>
+      <p><strong>Master Informatique</strong> — Université Hassan II (2019 - 2021)</p>
+      <p><strong>Licence Informatique</strong> — FST Settat (2016 - 2019)</p>
+    </div>
+
+    <!-- Colonne droite -->
+    <div class="skills">
+      <h1>Compétences</h1>
+      <ul>
+        <li>💻 JavaScript / TypeScript</li>
+        <li>⚛️ React, Next.js</li>
+        <li>☁️ Docker, Kubernetes</li>
+        <li>🗄️ PostgreSQL, MongoDB</li>
+      </ul>
+
+      <h1>Certifications</h1>
+      <ul>
+        <li>AWS Certified Developer</li>
+        <li>Google UX Design</li>
+        <li>Scrum Master PSM I</li>
+      </ul>
+
+      <h1>Centres d’intérêt</h1>
+      <ul>
+        <li>📸 Photographie</li>
+        <li>🌍 Voyages</li>
+        <li>🎮 Jeux vidéo</li>
+      </ul>
+    </div>
+
+  </section>
+<!--
+Ce script permet de basculer entre deux thèmes (clair et sombre).
+Lorsqu’on clique sur le bouton, la fonction toggleTheme() est appelée.
+Elle ajoute ou enlève les classes "theme-dark" et "theme-light" sur l’élément racine <html>.
+→ Résultat : les variables CSS changent automatiquement selon le thème actif.
+-->
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle("theme-dark");
+      document.documentElement.classList.toggle("theme-light");
+    }
+  </script>
+</body>
+</html>

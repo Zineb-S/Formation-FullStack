@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Différence unités CSS</title>
+  <link rel="stylesheet" href="units.css">
+</head>
+<body>
+  <h1>Démo : Unités CSS (absolues vs relatives)</h1>
+
+  <section class="container">
+    <div class="box px">100px</div>
+    <div class="box percent">50%</div>
+    <div class="box em">10em</div>
+    <div class="box rem">10rem</div>
+    <div class="box vw" onc>20vw</div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Changer la taille du texte (impacte em/rem)</h2>
+    <label>
+      Taille police racine:
+      <input type="range" min="10" max="40" value="16"
+        oninput="document.documentElement.style.fontSize=this.value+'px'">
+    </label>
+  </section>
+</body>
+</html>
