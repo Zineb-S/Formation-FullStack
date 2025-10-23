@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  border: 2px solid #333;
+  padding: 10px;
+  height: 200px; /* for testing vertical alignment */
+}
+
+.box {
+  background: lightseagreen;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  margin: 5px;
+  flex: 1; /* make all boxes equal width */
+  text-align: center;
+}

@@ -1,0 +1,115 @@
+Exercice 1 – Premiers pas avec Git
+
+🎯 Objectif : initialiser un dépôt local et faire un premier commit.
+
+Créez un dossier mon-projet.
+
+Ajoutez un fichier index.html avec juste un <h1>Hello Git</h1>.
+
+Lancez :
+
+git init
+git add .
+git commit -m "Premier commit : ajout index.html"
+
+
+Vérifiez avec :
+
+git status
+git log
+
+Exercice 2 – Travailler avec GitHub
+
+🎯 Objectif : lier le projet local à un repo distant.
+
+Créez un dépôt vide sur GitHub (mon-projet).
+
+Dans VS Code/terminal :
+
+git remote add origin https://github.com/<username>/mon-projet.git
+git branch -M main
+git push -u origin main
+
+
+Vérifiez que le fichier index.html est visible sur GitHub.
+
+Exercice 3 – Historique et modifications
+
+🎯 Objectif : suivre l’évolution du code.
+
+Modifiez index.html pour ajouter un paragraphe <p>Bienvenue sur Git</p>.
+
+Faites :
+
+git status
+git diff
+git add index.html
+git commit -m "Ajout paragraphe de bienvenue"
+
+
+Vérifiez l’historique :
+
+git log --oneline
+
+Exercice 4 – Branches
+
+🎯 Objectif : créer et fusionner des branches.
+
+Créez une nouvelle branche :
+
+git checkout -b feature-header
+
+
+Ajoutez un <header> dans index.html.
+
+Committez vos changements.
+
+Revenez sur main :
+
+git checkout main
+
+
+Fusionnez :
+
+git merge feature-header
+
+Exercice 5 – Conflit simulé (binôme)
+
+🎯 Objectif : résoudre un conflit de merge.
+
+Étudiant A et B travaillent sur le même fichier index.html.
+
+A ajoute : <footer>© 2025</footer> et commit.
+
+B ajoute : <footer>Contact: email@example.com</footer> et commit.
+
+Quand B pousse → conflit.
+
+Résolvez manuellement le fichier pour garder les deux infos, puis :
+
+git add index.html
+git commit -m "Résolution conflit footer"
+
+Exercice 6 – Collaboration
+
+🎯 Objectif : cloner et contribuer.
+
+Étudiant A crée un repo site-classe.
+
+Étudiant B le clone :
+
+git clone https://github.com/<username>/site-classe.git
+
+
+B ajoute un fichier page-b.html, commit et push.
+
+A fait git pull pour récupérer la contribution.
+
+Exercice 7 – Déploiement avec GitHub Pages
+
+🎯 Objectif : mettre le projet en ligne.
+
+Sur GitHub → Settings > Pages → activez GitHub Pages sur la branche main.
+
+Vérifiez que le site est en ligne à l’adresse :
+https://<username>.github.io/mon-projet/
